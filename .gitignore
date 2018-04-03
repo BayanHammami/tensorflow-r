@@ -1,5 +1,7 @@
 *.Rproj
 .Rproj.user
+.Rprofile
+.Rhistory
 mnist-data/**
 packrat/lib*/
 packrat/src/
