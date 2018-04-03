@@ -8,7 +8,7 @@ library(reshape2)
 library(tensorflow)
 library(tfestimators)
 
-packrat::set_opts(vcs.ignore.src = TRUE)
+#packrat::set_opts(vcs.ignore.src = TRUE)
 
 data_dir <- "mnist-data"
 dir.create(data_dir, recursive = TRUE, showWarnings = FALSE)
