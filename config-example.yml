@@ -1,0 +1,7 @@
+default:
+  redshift_user: "USER"
+  redshift_pw: "PASSWORD"
+  
+production:
+  redshift_user: "USER"
+  redshift_pw: "PASSWORD"

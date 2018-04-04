@@ -9,6 +9,10 @@ library(tensorflow)
 library(tfestimators)
 
 #packrat::set_opts(vcs.ignore.src = TRUE)
+#packrat::set_opts(vcs.ignore.src = TRUE)
+
+config <- config::get()
+config::is_active("production")
 
 data_dir <- "mnist-data"
 dir.create(data_dir, recursive = TRUE, showWarnings = FALSE)
