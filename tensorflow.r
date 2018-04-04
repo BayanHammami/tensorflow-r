@@ -7,6 +7,23 @@ library(ggplot2)
 library(reshape2)
 library(tensorflow)
 library(tfestimators)
+library(logging)
+
+formatter.fewsdiagnostics <- function(record) {
+  if(record$level <= loglevels[['INFO']])
+    level <- 3
+  else if(record$level <= loglevels[['WARNING']])
+    level <- 2
+  else if(record$level <= loglevels[['ERROR']])
+    level <- 1
+  else
+    level <- 0
+  
+  sprintf('  <line level="%d" description="LizardScripter :: %s :: %s"/>\n', level, record$timestamp, record$msg)
+}
+
+addHandler(writeToFile, file="./testing.log", level='DEBUG', formatter = formatter.fewsdiagnostics )
+loginfo('does it work?')
 
 #packrat::set_opts(vcs.ignore.src = TRUE)
 #packrat::set_opts(vcs.ignore.src = TRUE)

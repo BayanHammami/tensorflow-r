@@ -6,3 +6,4 @@ mnist-data/**
 packrat/lib*/
 packrat/src/
 config.yml
+*.log
